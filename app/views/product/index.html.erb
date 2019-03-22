@@ -1,25 +1,93 @@
-<div class="container">
-<h1>Product#index</h1>
-<h3><%#= @product.name %> - <%#= @product.price %><br></h3>
-<%# if @product.picture.attached? %>
-<%#= image_tag @product.picture, size: 300 %><br><br>
-<%# end %>
-<%#= @product.description %><br><br><hr>
-<%#= link_to "Назад", admin_products_path %>
+<div class="section1">
+        <div class="section1-middle"></div>
+        <div class="section1-bottom">
+            <div class="width">
+                <div class="section1-bottom-row">
+                    <div class="section1-bottom-col-left">
+                        <div class="section1-bottom-spruce">
+                            <img src="icons/s1-spruce-lg.png" alt="Новогодняя елка">
 
-<br><br>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Ваше Имя</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите Имя">
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Ваш номер телефона</label>
-    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Введите номер">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+                        </div>
+                    </div>
 
-</div>
+                    <div class="section1-bottom-col-right">
+                        <div class="section1-bottom-heading">
+                            <div class="section1-bottom-heading-title">экологичные <span>искусственные</span> ёлочки</div>
+                            <div class="section1-bottom-heading-subtitle">с бесплатной доставкой по Алмате</div>
+                        </div>
+
+                       
+                        <form id="formId" action="http://ar-1-2-esdp-1.ltestl.com/api/v1/orders/create?product_id=1" method="post">
+
+                            <div class="section1-bottom-call-form js-validate-from" id="form-top">
+                                <div class="section1-bottom-call-form-row">
+
+                                <div class="section1-bottom-call-form-col-left">
+                                        <div class="section1-bottom-call-form-col-left-inset">
+                                            <label class="error-label js-top-error-label">Введите телефон</label>
+                                            <input type="text" class="form-top-phone" required="" name="order[client_name]" placeholder="Ваше Имя">
+                                        </div>
+                                    </div>
+
+                                    <div class="section1-bottom-call-form-col-left">
+                                        <div class="section1-bottom-call-form-col-left-inset">
+                                            <label class="error-label js-top-error-label">Введите телефон</label>
+                                            <input type="text" class="form-top-phone" required="" name="order[client_phone]"  placeholder="Ваш телефон">
+                                        </div>
+                                    </div>
+                                    <div class="section1-bottom-call-form-col-right">
+                                        <input id="form-top-submit" type="submit" value="Заказать ёлочку">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="section1-bottom-icons">
+                            <div class="section1-bottom-icons-row">
+                                <div class="section1-bottom-icons-col-left">
+                                    <div class="section1-bottom-icons-col-left-smell">
+                                        <div class="section1-bottom-icons-col-left-smell-ico">
+                                            <img src="icons/s1-ico-smell.png" alt="Без запаха">
+                                        </div>
+                                        <div class="section1-bottom-icons-col-left-smell-text">Без запаха</div>
+                                    </div>
+                                </div>
+                                <div class="section1-bottom-icons-col-right">
+                                    <div class="section1-bottom-icons-col-right-eco">
+                                        <div class="section1-bottom-icons-col-right-eco-ico">
+                                            <img src="icons/s1-ico-eco.png" alt="Экологически чистые">
+                                        </div>
+                                        <div class="section1-bottom-icons-col-right-eco-text">Экологически<br>чистые</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="section9">
+        <div class="width">
+            <div class="section9-row">
+                <div class="section9-col-left">© Все права защищены, 2017-2018</div>
+                <div class="section9-col-middle">
+                    <a target="_blank" href="politics.html">Политика конфиденциальности</a>
+                </div>
+                <div class="section9-col-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="../../assests/stylesheet/jquery.placeholder.min.js"></script>
+    <script src="../../assests/stylesheet/script.js"></script>
+	<script src="yved/script.js"></script>
+	
+	</div>
