@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'product/index'
-	root 'product#index'
+  get 'landings/show'
+	root 'landings#show'
 end
