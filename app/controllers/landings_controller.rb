@@ -3,9 +3,7 @@ require "net/http"
 class LandingsController < ApplicationController
 
   def show
-    create_products_by_response_body
-
-    @products = Product.all
+    @products = JSON.parse(get_response_body)
   end
 
   private
@@ -18,21 +16,5 @@ class LandingsController < ApplicationController
     }
 
     response.body
-  end
-
-  def create_products_by_response_body
-    products = JSON.parse(get_response_body)
-
-    Product.all.destroy_all
-
-    products.each do |product|
-      Product.create!(
-        id: product["id"],
-        name: product["name"],
-        description: product["description"],
-        price: product["price"]
-      )
-      rescue ActiveRecord::RecordNotUnique
-    end
   end
 end

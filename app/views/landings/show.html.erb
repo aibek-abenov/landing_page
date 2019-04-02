@@ -2,7 +2,7 @@
         <div class="section1-middle"></div>
         <div class="section1-bottom">
             <div class="width">
-                <div class="section1-bottom-row">
+                <div class="section1-bottom-row row">
                     <% @products.each do |product| %>
 
                         <div class="section1-bottom-col-left">
@@ -15,18 +15,18 @@
 
                         <div class="section1-bottom-col-right">
                             <div class="section1-bottom-heading">
-                                <h3><%= product.name %></h3>
-                                <div class="section1-bottom-heading-title"><%= product.description %></div>
+                                <h3><%= product["name"] %></h3>
+                                <div class="section1-bottom-heading-title"><%= product["description"] %></div>
                                 <div class="section1-bottom-heading-subtitle">с бесплатной доставкой по Алмате</div>
 
                                 <p>
-                                    Цена: <%= product.price %>
+                                    Цена: <%= product["price"] %>
                                 </p>
                             </div>
 
 
-                            <form id="formId" action="http://ar-1-2-esdp-1.ltestl.com/api/v1/orders/create?product_id=<%= product.id %>" method="post">
-                            <!-- <form id="formId" action="http://localhost:3000/api/v1/orders/create?product_id=<%= product.id %>" method="post"> -->
+                            <form id="formId" action="http://ar-1-2-esdp-1.ltestl.com/api/v1/orders/create?product_id=<%= product['id'] %>" method="post">
+                            <!-- <form id="formId" action="http://localhost:3000/api/v1/orders/create?product_id=" method="post"> -->
 
                                 <div class="section1-bottom-call-form js-validate-from" id="form-top">
                                     <div class="section1-bottom-call-form-row">
