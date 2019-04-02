@@ -23,6 +23,8 @@ class LandingsController < ApplicationController
   def create_products_by_response_body
     products = JSON.parse(get_response_body)
 
+    Product.all.destroy_all
+
     products.each do |product|
       Product.create!(
         id: product["id"],
